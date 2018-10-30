@@ -1,1 +1,1 @@
-# intelligoProyect
+# inteligoProject
