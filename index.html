@@ -6,31 +6,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Inteligo SAB</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./src/css/principal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 </head>
 
 <body>
     <nav>
-        <div class="nav-wrapper blue">
-            <a href="#" class="brand-logo left">Inteligo</a>
+        <div class="nav-wrapper indigo darken-2">
+            <a href="#" class="brand-logo left"><img src="./img/I Complementarias Fondo azul (1).jpg" style="height:50px;"></a>
         </div>
     </nav>
-    
-    <div class="carousel">
-        <a class="carousel-item" href="#one!"><img src="./img/banner-01.jpg"></a>
-        <a class="carousel-item" href="#two!"><img src="./img/banner-04.jpg"></a>
+
+    <nav class="grey lighten-2">
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="hide-on-small-only">
+            <li><a href="#">Acerca de Inteligo SAB</a></li>
+            <li><a href="#">¿Por qué nosotros?</a></li>
+            <li><a href="#">Productos y servicios</a></li>
+            <li><a href="#">Servicio al cliente</a></li>
+            <li><a href="form.html">CONOCE TU PERFIL</a></li>
+        </ul>
+    </nav>
+    <ul class="sidenav hide-on-med-and-up" id="mobile-demo">
+        <li><a href="#">Acerca de Inteligo SAB</a></li><br>
+        <li><a href="#">¿Por qué nosotros?</a></li><br>
+        <li><a href="#">Productos y servicios</a></li><br>
+        <li><a href="#">Servicio al cliente</a></li><br>
+        <li><a href="form.html">CONOCE TU PERFIL</a></li>
+    </ul>
+
+    <!-- <div class="container">
+        <img src="./img/banner-01.jpg">
     </div>
+    <div class="container">
+        <img src="./img/banner-04.jpg">
+    </div> -->
 
 
 
 
-    <canvas id="inversorPie" width="800" height="450"></canvas>
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- <canvas id="inversorPie" width="800" height="450"></canvas> -->
+      <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+
     <script src="./src/js/main.js"></script>
 
 
