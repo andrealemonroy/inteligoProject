@@ -1,6 +1,6 @@
+const preguntas = document.getElementById("question");
 const respuestas = document.getElementById("responses");
 const imagenTemplate = document.getElementById('imagenes');
-
 
 // Initialize Firebase
 const config = {
@@ -18,6 +18,8 @@ let database = firebase.database();
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
+console.log($('#email').val());
+
 const arr = [];
 const ref = firebase.database().ref('/questions');
 
@@ -279,10 +281,16 @@ perfilFunction(total1,total2)
 
 
 const createTemplate = (response, position, num) => {
+  preguntas.innerHTML =  `<p>${response[position].text}</p> `
   respuestas.innerHTML = '';
   for (let i = 1; i <= num; i++) {
+    console.log(response[position].text)
     respuestas.innerHTML += `
-<p>
+
+
+<p>     
+        
+
         <label for="rpta${i}">
           <input class="with-gap" value="${response[position].options['respuesta' + i]}" name="group1" type="radio" id="rpta${i}"  />
           <span>${response[position].options['respuesta' + i]}</span>
@@ -290,6 +298,7 @@ const createTemplate = (response, position, num) => {
 </p>  `
 
   }
+  position = position+1;
 };
 
 const imagenFunction = (image) => {
