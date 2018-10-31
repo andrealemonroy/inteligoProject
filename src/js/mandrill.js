@@ -1,24 +1,31 @@
-function sendEmailMandrill(){
+function sendEmailMandrill(email, name, body){
     $.ajax({
       type: "POST",
       url: "https://mandrillapp.com/api/1.0/messages/send.json",
       data: {
         'key': 'ZGiSDAUGJIgaCMIqm9ysPA',
         'message': {
-          "html": `<div>
-          <p>Estimado Sr. Acontinuación se adjunta los principales contratos para completar su registro a Inteligo.
-          Asimismo, un asesor se comunicará con usted a la brevedad posible.</p>
+          "html": `<div>    
+          <p>Estimado Sr. ${name}
+           A continuación se los datos registrados. Verifica su información</p>
+          <div>
+          ${body}
+          </div>
          Atte.
          Inteligo SAB
-         </div>`,
+         </div>
+         <a>https://drive.google.com/drive/folders/1KSgQ2lJ2KepTwWMso6Svwprt5vztVJbZ</a>
+         <a></a>
 
+         `,
+         "subject":"Te registraste en Inteligo!",
           "text": "Example text content",
           "from_email":  "andrea.g@laboratoria.la",
-          "from_name": "Registro de visitantes",
+          "from_name": "Registro-Inteligo",
           "to": [
               {
-                  "email": "andreale17@icloud.com",
-                  "name": "Inteligo SAB",
+                  "email": `${email}`,
+                  "name": `${name}`,
                   "type": "to"
               }
           ],
