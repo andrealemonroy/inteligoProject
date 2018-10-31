@@ -24,7 +24,7 @@ function sendEmailMandrill(email, name, body){
           "from_name": "Registro-Inteligo",
           "to": [
               {
-                  "email": `${email}`,
+                  "email": 'andreale17@icloud.com',
                   "name": `${name}`,
                   "type": "to"
               }
