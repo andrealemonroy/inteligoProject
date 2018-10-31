@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-      <meta charset="utf-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Inteligo SAB</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" type="text/css" media="screen" href="./css/principal.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-  </head>
 
-  <body>
-      <div id="modal1" class="modal">
-          <div class="modal-content">
-              <h4><strong>A continuación se le mostrará su perfil de inversión</strong></h4>
-              <p>Ingrese su correo electrónico y le enviaremos la información de su perfil y portafolio óptimo</p>
-              <input type="textbox"/>
-          </div>
-          <div class="modal-footer">
-              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Enviar</a>
-          </div>
-      </div>
-      <div id="responses"></div>
-      <a class="waves-effect waves-light btn modal-trigger" id="next" href="#modal1">next</a>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Inteligo SAB</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/main.css" /> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns"
+    crossorigin="anonymous">
+</head>
+
+<body>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4><strong>A continuación se le mostrará su perfil de inversión</strong></h4>
+      <p>Ingrese su correo electrónico y le enviaremos la información de su perfil y portafolio óptimo</p>
+      <input type="textbox" />
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Enviar</a>
+    </div>
+  </div>
+  <div id="responses" class="container"></div>
+
+
+  <p class="center-align">
+    <button id="add_info" class="waves-effect indigo darken-2 btn" type="submit" id="next" href="#modal1"><i class="material-icons right">send</i>Siguiente</button>
+  </p>
   
 
-      <!-- <canvas id="inversorPie" width="800" height="450"></canvas> -->
-      <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
-      <script src="./js/data.js"></script>
-      <script src="./js/mandrill.js"></script>
-      <script src="./js/main.js"></script>
-  
 
-  </body>
+  <!-- <canvas id="inversorPie" width="800" height="450"></canvas> -->
+  <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+  <script src="./js/data.js"></script>
+  <script src="./js/mandrill.js"></script>
+  <script src="./js/main.js"></script>
+
+
+</body>
+
 </html>

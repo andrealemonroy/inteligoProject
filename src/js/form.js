@@ -1,6 +1,6 @@
-$(document).ready(function() {
-  $(".datepicker").datepicker();
-});
+// $(document).ready(function() {
+//   $(".datepicker").datepicker();
+// });
 
 
 const addInfo = document.getElementById("add_info");
