@@ -33,7 +33,7 @@ $(document).ready(function () {
   $('.sidenav').sidenav();
 });
 
-let ref = firebase.database().ref('/questions');
+const ref = firebase.database().ref('/questions');
 ref.once('value', (data) => {
   console.log(data.key.length);
   // data.forEach(dat => {

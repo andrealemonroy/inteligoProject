@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Inteligo SAB</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="./src/css/principal.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  </head>
+
+  <body>
+      <nav>
+          <div class="nav-wrapper indigo darken-2">
+              <a href="#" class="brand-logo left"><img src="./img/I Complementarias Fondo azul (1).jpg" style="height:50px;"></a>
+          </div>
+      </nav>
+      <div class="container" id="container-question">
+        <p>¿Cuál es el objetivo primario de su portafolio de inversión?</p>
+        <ul>
+          <li>
+            <label for="rpta">
+              <input class="with-gap" name="group1" type="radio"  />
+              <span>Seguridad.- Prefiero la seguridad de mis inversiones, así la rentabilidad en el
+                tiempo se encuentre por debajo de los niveles de inflación (2% anual).</span>
+            </label>
+          </li>
+          <li>
+            <label for="rpta">
+              <input name="group1" type="radio"  />
+              <span>Protección a la inflación.- Estoy dispuesto a aceptar sólo un nivel bajo de
+                variación en mi inversión a cambio de una rentabilidad que me proteja de la
+                inflación.</span>
+            </label>
+          </li>
+          <li>
+            <label for="rpta">
+              <input name="group1" type="radio"  />
+              <span>Crecimiento y seguridad.- Quiero un balance entre crecimiento y seguridad, y
+                estoy dispuesto a aceptar un nivel medio de variación en el valor de mi inversión
+                con la finalidad de alcanzar una rentabilidad mayor a la inflación.</span>
+            </label>
+          </li>
+          <li>
+            <label for="rpta">
+              <input name="group1" type="radio"  />
+              <span>Crecimiento.- Estoy interesado en generar crecimiento en mi inversión en el
+                tiempo, y estoy menos preocupado por las fluctuaciones que éste pueda registrar
+                en la búsqueda del retorno.</span>
+            </label>
+          </li>
+          <li>
+            <label for="rpta">
+              <input name="group1" type="radio"  />
+              <span>Máximo crecimiento.- Mi único objetivo es el máximo crecimiento de mi inversión
+                en el tiempo y puedo tolerar altos niveles de fluctuación en el valor de mi
+                inversión en la búsqueda del retorno.</span>
+            </label>
+          </li>
+        </ul>  
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s1">
+            <a class="waves-effect waves-light btn-large"><i class="fas fa-greater-than"></i></a>
+          </div>
+        </div>         
+      </div>
+
+      <!-- <canvas id="inversorPie" width="800" height="450"></canvas> -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+      <script src="./src/js/data.js"></script>
+      <script src="./src/js/mandrill.js"></script>
+      <script src="./src/js/main.js"></script>
+
+  </body>
+</html>
