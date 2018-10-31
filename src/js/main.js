@@ -1,4 +1,21 @@
 
+new Chart(document.getElementById("inversorPie"), {
+  type: 'pie',
+  data: {
+    labels: ["Caja y equivalentes", "Renta Fija", "Renta Variable", "Renta Alternativa"],
+    datasets: [{
+      // label: "tipo de inversor",
+      backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9"],
+      data: [35, 12, 5, 48]
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Tipo de inversión'
+    }
+  }
+});
 // Initialize Firebase
 const config = {
   apiKey: "AIzaSyAWhYg7ooZsREWBlcDS4yCrKUOh2tQhVVk",
@@ -17,32 +34,23 @@ $(document).ready(function(){
 
 let ref = firebase.database().ref('/questions');
 ref.once('value', (data) => {
+  const daat = data.val();
+  console.log(daat.key)
   data.forEach(dat => {
+    dat.forEach(d =>{
+      d.forEach(final =>{
+        console.log(final.val());
+      })
+      
+    })
     // console.log(dat.key);
-    let client = dat.key;
-    console.log(dat.val());
+    // let client = dat.key;
+    // console.log(dat.val());
     //   extraerDataVisitator = visitator.val();
-    sendEmailMandrill();
+    // sendEmailMandrill();
   })
 });
 
-// new Chart(document.getElementById("inversorPie"), {
-//   type: 'pie',
-//   data: {
-//     labels: ["Caja y equivalentes", "Renta Fija", "Renta Variable", "Renta Alternativa"],
-//     datasets: [{
-//       // label: "tipo de inversor",
-//       backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9"],
-//       data: [35, 12, 5, 48]
-//     }]
-//   },
-//   options: {
-//     title: {
-//       display: true,
-//       text: 'Tipo de inversión'
-//     }
-//   }
-// });
 
 // let total2= 14;
 
@@ -98,5 +106,5 @@ const perfilFunction=(total1, total2)=>{
 
 perfilFunction(10, 24)
 
-});
+
 
