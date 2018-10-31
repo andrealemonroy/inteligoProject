@@ -40,59 +40,65 @@ ref.once('value', (data) => {
   position = 0;
   console.log(data.key.length);
   const response = Object.values(data.val())
-  createTemplate(response, position);
+  createTemplate(response, position, 5);
 
   document.getElementById('next').addEventListener("click", () => {
-    if (position < 7) {
-      position = position + 1;
-      createTemplate(response, position);
-    } else if (position = 6) {
-      $(document).ready(function () {
-        $('.modal').modal();
-      });
+    if (position = 1) {
+      createTemplate(response, position, 3);
     }
+    document.getElementById('next').addEventListener("click", () => {
+      if (position = 2) {
+        createTemplate(response, position, 4);
+      }
+      document.getElementById('next').addEventListener("click", () => {
+        if (position = 3) {
+          createTemplate(response, position, 5);
+        }
+        document.getElementById('next').addEventListener("click", () => {
+          if (position = 4) {
+            createTemplate(response, position, 5);
+          }
+          document.getElementById('next').addEventListener("click", () => {
+            if (position = 5) {
+              createTemplate(response, position, 4);
+            }
+            document.getElementById('next').addEventListener('click', () => {
+              if (position = 6) {
+                createTemplate(response, position, 5);
+              }
+              document.getElementById('next').addEventListener('click', () => {
+                if (position = 7) {
+                  createTemplate(response, position, 5);
+                  $(document).ready(function () {
+                    $('.modal').modal();
+                  })
+                }
+              })
+            })
+          })
+
+        })
+
+      })
+
+    })
+
   })
-})
 
+});
 
+const createTemplate = (response, position, num) => {
+  respuestas.innerHTML = '';
+  for (let i = 1; i <= num; i++) {
+    respuestas.innerHTML += `
 
-const createTemplate = (response, position) => {
-  respuestas.innerHTML = `
-    <form action="#">
 <p>
-
-        <label for="rpta1">
-          <input class="with-gap" name="group1" type="radio" id="rpta1"  />
-          <span>${response[position].options['respuesta1']}</span>
+        <label for="rpta${i}">
+          <input class="with-gap" name="group${i}" type="radio" id="${position}rpta${i}"  />
+          <span>${response[position].options['respuesta' + i]}</span>
         </label>
-</p>
-<p>
-        <label for="rpta2">
-          <input class="with-gap" name="group1" type="radio" id="rpta2"/>
-          <span>${response[position].options['respuesta2']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta3">
-          <input class="with-gap" name="group1" type="radio" id="rpta3" />
-          <span>${response[position].options['respuesta3']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta4">
-          <input class="with-gap" name="group1" type="radio" id="rpta4" />
-          <span>${response[position].options['respuesta4']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta5">
-          <input class="with-gap" name="group1" type="radio" id="rpta5" />
-          <span>${response[position].options['respuesta5']}</span>
-        </label>
-        </p>
-  </form>
-  `
-
+</p>  `
+  }
 
 }
 
