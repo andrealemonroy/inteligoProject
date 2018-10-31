@@ -68,6 +68,21 @@ ${response5}
 })
 
 
+const register= firebase.database().ref('/registro');
+register.once('value', (data) => {
+  const regis = Object.values(data.val())[0] 
+  const email = regis.mail;
+  const name = regis.name;
+  const phone = regis.phone;
+  const birthday = regis.birthday;
+  console.log();
+  
+  const body= `<p>Nombre:${name}</p> <p>Email:${email}</p> <p>Telefono:${phone}</p> <p>Fecha de Nacimiento:${birthday}</p>`
+
+  sendEmailMandrill(email, name, body)
+  
+})
+
 // let total2= 14;
 
 // let total1= 3 + 2 ;
