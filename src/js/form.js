@@ -26,4 +26,5 @@ addInfo.addEventListener("click", () => {
     phone: phone,
     mail: mail
   });
+    document.getElementById("miForm").reset();
 });
