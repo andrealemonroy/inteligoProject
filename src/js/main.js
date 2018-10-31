@@ -1,4 +1,3 @@
-
 const respuestas = document.getElementById("responses");
 
 // new Chart(document.getElementById("inversorPie"), {
@@ -39,31 +38,59 @@ const ref = firebase.database().ref('/questions');
 ref.once('value', (data) => {
   console.log(data.key.length);
   // data.forEach(dat => {
-  for (let i = 0; i < data.key.length; i++) {
-    let response = Object.values(data.val())
-    // let response1 = Object.values(data.val())[i].options['respuesta1'];
-    // console.log('respuesta 1 ' + response1);
-    // let response2 = Object.values(data.val())[i].options['respuesta2'];
-    // console.log('respuesta 2 ' + response2);
-    // let response3 = Object.values(data.val())[i].options['respuesta3'];
-    // console.log('respuesta 3 ' + response3);
-    // let response4 = Object.values(data.val())[i].options['respuesta4'];
-    // console.log('respuesta 4 ' + response4);
-    // let response5 = Object.values(data.val())[i].options['respuesta5'];
-    // console.log('response5' + response5);
-    respuestas.innerHTML += `<checkbox>
-    
-    
-    </checkbox>    
-${response[i].options['respuesta1']}
-${response[i].options['respuesta2']}
-${response[i].options['respuesta3']}
-${response[i].options['respuesta4']}
-${response[i].options['respuesta5']}
+  // for (let i = 0; i < data.key.length; i++) {
+  const response = Object.values(data.val())
+  // let response1 = Object.values(data.val())[i].options['respuesta1'];
+  // console.log('respuesta 1 ' + response1);
+  // let response2 = Object.values(data.val())[i].options['respuesta2'];
+  // console.log('respuesta 2 ' + response2);
+  // let response3 = Object.values(data.val())[i].options['respuesta3'];
+  // console.log('respuesta 3 ' + response3);
+  // let response4 = Object.values(data.val())[i].options['respuesta4'];
+  // console.log('respuesta 4 ' + response4);
+  // let response5 = Object.values(data.val())[i].options['respuesta5'];
+  // console.log('response5' + response5);
 
-         `
-  }
+  // }
 
+   position = 0;
+  respuestas.innerHTML = `
+
+  <p></p>
+  <ul>
+    <li>
+      <label for="rpta">
+        <input class="with-gap" name="group1" type="radio"  />
+        <span>${response[position].options['respuesta1']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta2']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta3']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta4']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta5']}</span>
+      </label>
+    </li>
+  </ul>  
+</div>
+`
 
   // })
   // console.log(dat.key);
@@ -72,7 +99,50 @@ ${response[i].options['respuesta5']}
   //   extraerDataVisitator = visitator.val();
   // sendEmailMandrill();
 })
+document.getElementById('next').addEventListener("click", () => {
+  position = position + 1;
+  respuestas.innerHTML = "";
+  
+  position = 0;
+  respuestas.innerHTML = `
 
+  <p></p>
+  <ul>
+    <li>
+      <label for="rpta">
+        <input class="with-gap" name="group1" type="radio"  />
+        <span>${response[position].options['respuesta1']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta2']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta3']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta4']}</span>
+      </label>
+    </li>
+    <li>
+      <label for="rpta">
+        <input name="group1" type="radio"  />
+        <span>${response[position].options['respuesta5']}</span>
+      </label>
+    </li>
+  </ul>  
+</div>
+`
+
+})
 
 // let total2= 14;
 
