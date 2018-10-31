@@ -80,7 +80,7 @@ const createTemplate = (response, position) => {
         </p>
         <p>
         <label for="rpta4">
-          <input class="with-gap" name="group1" type="radio" id="rpta4" />
+          <input class="with-gap" name="group1" type="radio" id="rpta4" checked/>
           <span>${response[position].options['respuesta4']}</span>
         </label>
         </p>
@@ -95,7 +95,11 @@ const createTemplate = (response, position) => {
 
 
 }
+$('.with-gap').click(function() {
+  if($('#radio_button').is(':checked')) { alert("it's checked"); }
+});
 
+ 
 // })
 // console.log(dat.key);
 // let client = dat.key;

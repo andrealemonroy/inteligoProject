@@ -1,0 +1,140 @@
+{
+  "questions" : {
+    "-LQ62urbng1PEukwpMvE" : {
+      "options" : {
+        "respuesta1" : "{texto:\"Seguridad: Prefiero la seguridad de mis inversiones, así la rentabilidad en el tiempo se encuentre por debajo de los niveles de inflación (2% anual).\",}",
+        "respuesta2" : "Protección a la inflación: Estoy dispuesto a aceptar sólo un nivel bajo de variación en mi inversión a cambio de una rentabilidad que me proteja de la inflación.",
+        "respuesta3" : "Crecimiento y seguridad: Quiero un balance entre crecimiento y seguridad, y estoy dispuesto a aceptar un nivel medio de variación en el valor de mi inversión con la finalidad de alcanzar una rentabilidad mayor a la inflación.",
+        "respuesta4" : "Crecimiento: Estoy interesado en generar crecimiento en mi inversión en el tiempo, y estoy menos preocupado por las fluctuaciones que éste pueda registrar en la búsqueda del retorno.",
+        "respuesta5" : "Máximo crecimiento: Mi único objetivo es el máximo crecimiento de mi inversión en el tiempo y puedo tolerar altos niveles de fluctuación en el valor de mi inversión en la búsqueda del retorno."
+      },
+      "text" : "1. ¿Cuál es el objetivo primario de su portafolio de inversión?"
+    },
+    "-LQ633cZHX1XcdmjiQoR" : {
+      "options" : {
+        "respuesta1" : "Sí, de más de 3% anual del patrimonio invertido",
+        "respuesta2" : "Sí, de menos de 3% anual del patrimonio invertido",
+        "respuesta3" : "No, y de generarse ingresos, prefiero que sean reinvertidos para favorecer el crecimiento de mi inversión"
+      },
+      "text" : "2. ¿Requiere generar ingresos corrientes los cuales retirará periódicamente?"
+    },
+    "-LQ63D9-LxUvtAjlL_7p" : {
+      "options" : {
+        "respuesta1" : "Menos de 1 año",
+        "respuesta2" : "Entre 1 y 3 años",
+        "respuesta3" : "Entre 3 y 5 años",
+        "respuesta4" : "Más de 5 años"
+      },
+      "text" : "3. ¿Cuánto tiempo estima que podrá mantener su portafolio invertido en la estrategia que le sea recomendada sin que requiera realizar un retiro significativo de sus fondos?"
+    },
+    "-LQ63_5TDzha_QauADQD" : {
+      "options" : {
+        "respuesta1" : "Requiero convertir la mayor parte de mi portafolio en efectivo para el próximo año.",
+        "respuesta2" : "Podría necesitar alrededor del 50% de mi portafolio en efectivo el próximo año.",
+        "respuesta3" : "No creo que requiera realizar ningún retiro de mi portafolio que sea mayor al ingreso que éste genere. En caso de una emergencia, no espero retirar más del 10% del capital invertido el próximo año.",
+        "respuesta4" : "No creo que requiera realizar ningún retiro de mi portafolio que sea mayor al ingreso que éste genere. En caso de una emergencia, cuento con otros recursos que me permitirían cubrir dicha necesidad por un plazo de 1 a 3 años.",
+        "respuesta5" : "Tengo capacidad de asumir una estrategia de inversión de largo plazo. No requiero estos excedentes en un horizonte de 3 a 5 años y en caso de una emergencia, dispongo de otros recursos para atenderla."
+      },
+      "text" : "4. ¿Cuál de las siguientes afirmaciones describe mejor sus necesidades de liquidez?"
+    },
+    "-LQ63n1KplDeGHTHIrKU" : {
+      "image" : "",
+      "options" : {
+        "prespuesta2" : "Portafolio B",
+        "prespuesta3" : "Portafolio C",
+        "respuesta1" : "Portafolio A",
+        "respuesta4" : "Portafolio D",
+        "respuesta5" : "Portafolio E"
+      },
+      "text" : "5. ¿Con cuál de las siguientes trayectorias hipotéticas en su inversión se sentiría más cómodo?"
+    },
+    "-LQ63z82g3AmmtabE3yf" : {
+      "options" : {
+        "respuesta1" : "Vendería inmediatamente dicha inversión a pesar de realizar la pérdida. Este tipo de inversiones no encaja en mi perfil.",
+        "respuesta2" : "Mantendría la inversión hasta que regrese a su valor inicial para luego venderla y sustituirla por algo menos volátil.",
+        "respuesta3" : "La mantendría porque las fluctuaciones en los precios de mercado son probables. Yo estoy pensando en la rentabilidad que me va a generar en el largo plazo.",
+        "respuesta4" : "Compraría más de esa inversión. Sería una gran oportunidad de promediar el precio a la baja y, por lo tanto, mejorar el rendimiento de largo plazo de mi portafolio."
+      },
+      "text" : "6. Si un activo dentro de su portafolio de inversión cayera en 25% en un horizonte de un año, ¿qué haría?"
+    },
+    "-LQ65JnWdEhkRzcpOJ2g" : {
+      "options" : {
+        "respuesta1" : "Menos de 3 meses",
+        "respuesta2" : "De 3 a 6 meses",
+        "respuesta3" : "De 6 meses a 1 año",
+        "respuesta4" : "Entre 1 y 2 años",
+        "respuesta5" : "De 2 a 3 años"
+      },
+      "text" : "7. Dado que los portafolios muestran fluctuaciones, ¿cuánto tiempo estaría dispuesto a esperar a que sus inversiones reviertan una pérdida temporal?"
+    },
+    "-LQ669zCiGhpQxFb5HRw" : {
+      "image" : "",
+      "options" : {
+        "respuesta1" : "Portafolio A",
+        "respuesta2" : "Portafolio B",
+        "respuesta3" : "Portafolio C",
+        "respuesta4" : "Portafolio D",
+        "respuesta5" : "Portafolio E"
+      },
+      "text" : "8. Las crisis financieras no son el estado habitual del mercado. Sin embargo, considerando el retorno anual promedio y la máxima caída que se registraría en una crisis, ¿cuál de las siguientes opciones te parece la más adecuada?"
+    }
+  },
+  "registro" : {
+    "-LQ7f20HN7ka1p73m__t" : {
+      "birthday" : "2018-10-12",
+      "gender" : "2",
+      "lastname" : "estamos",
+      "mail" : "kaluguzmann@gmail.com",
+      "name" : "hola",
+      "phone" : "955955274"
+    },
+    "-LQ7qRvvAUfEYY-c9CtF" : {
+      "birthday" : "2016-12-05",
+      "gender" : "1",
+      "lastname" : "Zanabria",
+      "mail" : "kalucitagn@gmail.com",
+      "name" : "Sandra",
+      "phone" : "987654345"
+    },
+    "-LQ7qdEblzIHmUUnGdNw" : {
+      "birthday" : "2016-12-05",
+      "gender" : "1",
+      "lastname" : "Zanabria",
+      "mail" : "kalucitagn@gmail.com",
+      "name" : "Sandra",
+      "phone" : "987654345"
+    },
+    "-LQ7uBoyfITd_w1dPrTs" : {
+      "birthday" : "2010-12-15",
+      "gender" : "2",
+      "lastname" : "Salazar",
+      "mail" : "kaluguzmann@gmail.com",
+      "name" : "Alex",
+      "phone" : "98789876"
+    },
+    "-LQ7yDqEwAom4mtQYXFd" : {
+      "birthday" : "1999-12-13",
+      "gender" : "1",
+      "lastname" : "ticze",
+      "mail" : "tivczea@gmail.com",
+      "name" : "leyla",
+      "phone" : "987654321"
+    },
+    "-LQ89_go8dOytL8VHc87" : {
+      "birthday" : "",
+      "gender" : "",
+      "lastname" : "",
+      "mail" : "",
+      "name" : "",
+      "phone" : ""
+    },
+    "-LQ8Ccmt4S7mBYuJln6i" : {
+      "birthday" : "1990-04-04",
+      "gender" : "1",
+      "lastname" : "Sucasaca",
+      "mail" : "lizeth@gmail.com",
+      "name" : "Lizeth",
+      "phone" : "987667876"
+    }
+  }
+}
