@@ -15,18 +15,27 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
 });
 
-let ref = firebase.database().ref('/questions');
+const ref = firebase.database().ref('/questions');
 ref.once('value', (data) => {
+  console.log(Object.values(data.val())[1].text);
+  
   data.forEach(dat => {
     // console.log(dat.key);
-    let client = dat.key;
-    console.log(dat.val());
+    //let client = dat.key;
+    //console.log(dat.val().options);
+    /* const questions = dat.val();
+    for (const question in questions) {
+      if (questions.hasOwnProperty(question)) {
+        const element = questions[question];
+        console.log(element);
+      } 
+    }*/
     //   extraerDataVisitator = visitator.val();
     // sendEmailMandrill();
   })
 });
 
-new Chart(document.getElementById("inversorPie"), {
+/* new Chart(document.getElementById("inversorPie"), {
   type: 'pie',
   data: {
     labels: ["Caja y equivalentes", "Renta Fija", "Renta Variable", "Renta Alternativa"],
@@ -41,5 +50,5 @@ new Chart(document.getElementById("inversorPie"), {
       display: true,
       text: 'Tipo de inversión'
     }
-  }
-});
+  } 
+});*/
