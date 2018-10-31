@@ -1,4 +1,5 @@
 const respuestas = document.getElementById("responses");
+const imagenTemplate = document.getElementById('imagenes');
 
 // new Chart(document.getElementById("inversorPie"), {
 //   type: 'pie',
@@ -36,17 +37,33 @@ $(document).ready(function () {
 const arr = [];
 const ref = firebase.database().ref('/questions');
 
+
+
 ref.once('value', (data) => {
+//   fetch('./point.json')
+// .then((res)=>{
+//   return res.json()
+// })
+// .then((resp)=>{
+//   console.log(resp);
+  
+// })
+// console.log(resp);
+
   position = 0;
-  console.log(data.key.length);
+  // console.log(data.key.length);
   const response = Object.values(data.val())
   createTemplate(response, position, 5);
+  // const id= document.querySelector('input[name='+resp[4]+']:checked').id;
+  // console.log(id);
+  
 
   document.getElementById('next').addEventListener("click", () => {
     const val = document.querySelector('input[name="group1"]:checked').value;
     puntage(val);
     if (position = 1) {
       createTemplate(response, position, 3);
+      
     }
     document.getElementById('next').addEventListener("click", () => {
       if (position = 2) {
@@ -58,20 +75,29 @@ ref.once('value', (data) => {
         }
         document.getElementById('next').addEventListener("click", () => {
           if (position = 4) {
+            imagenFunction('./imagenes/image5.PNG');
             createTemplate(response, position, 5);
           }
           document.getElementById('next').addEventListener("click", () => {
             if (position = 5) {
+              imagenTemplate.innerHTML='';
               createTemplate(response, position, 4);
             }
             document.getElementById('next').addEventListener('click', () => {
               if (position = 6) {
+                imagenTemplate.innerHTML='';
                 createTemplate(response, position, 5);
               }
               document.getElementById('next').addEventListener('click', () => {
                 if (position = 7) {
+                  imagenFunction('./imagenes/pregunat8.PNG')
                   createTemplate(response, position, 5);
                 }
+                document.getElementById('next').addEventListener('click', ()=>{
+                  $(document).ready(function () {
+                    $('.modal').modal();
+                  })
+                })
               })
               document.getElementById('next').addEventListener('click', () => {
                 $(document).ready(function () {
@@ -118,14 +144,16 @@ const createTemplate = (response, position, num) => {
 
 <p>
         <label for="rpta${i}">
-          <input value="${response[position].options['respuesta' + i]}" class="with-gap" name="group1" type="radio" id="rpta${i}"  />
+          <input class="with-gap" value="${response[position].options['respuesta' + i]}" name="group${position}" type="radio" id="rpta${i}"  />
           <span>${response[position].options['respuesta' + i]}</span>
         </label>
 </p>  `
 
   }
+};
 
-
+const imagenFunction = (image)=>{
+  imagenTemplate.innerHTML= `<img src=${image} alt='perritos'/>`
 }
 
 
