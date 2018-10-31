@@ -1,23 +1,7 @@
+const preguntas = document.getElementById("question");
 const respuestas = document.getElementById("responses");
 const imagenTemplate = document.getElementById('imagenes');
 
-// new Chart(document.getElementById("inversorPie"), {
-//   type: 'pie',
-//   data: {
-//     labels: ["Caja y equivalentes", "Renta Fija", "Renta Variable", "Renta Alternativa"],
-//     datasets: [{
-//       // label: "tipo de inversor",
-//       backgroundColor: ["#3e95cd", "#8e5ea2", "#3cba9f", "#e8c3b9"],
-//       data: [35, 12, 5, 48]
-//     }]
-//   },
-//   options: {
-//     title: {
-//       display: true,
-//       text: 'Tipo de inversión'
-//     }
-//   }
-// });
 // Initialize Firebase
 const config = {
   apiKey: "AIzaSyAWhYg7ooZsREWBlcDS4yCrKUOh2tQhVVk",
@@ -34,6 +18,8 @@ let database = firebase.database();
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
+console.log($('#email').val());
+
 const arr = [];
 const ref = firebase.database().ref('/questions');
 
@@ -138,18 +124,22 @@ const puntage = (val) => {
 
 
 const createTemplate = (response, position, num) => {
+  preguntas.innerHTML =  `<p>${response[position].text}</p> `
   respuestas.innerHTML = '';
   for (let i = 1; i <= num; i++) {
+    console.log(response[position].text)
     respuestas.innerHTML += `
 
-<p>
+<p>     
+        
         <label for="rpta${i}">
-          <input class="with-gap" value="${response[position].options['respuesta' + i]}" name="group${position}" type="radio" id="rpta${i}"  />
+          <input class="with-gap" value="${response[position].options['respuesta' + i]}" name="group1" type="radio" id="rpta${i}"  />
           <span>${response[position].options['respuesta' + i]}</span>
         </label>
 </p>  `
 
   }
+  position = position+1;
 };
 
 const imagenFunction = (image)=>{
