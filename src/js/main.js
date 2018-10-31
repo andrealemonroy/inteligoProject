@@ -1,3 +1,4 @@
+
 const respuestas = document.getElementById("responses");
 
 // new Chart(document.getElementById("inversorPie"), {
@@ -27,6 +28,7 @@ const config = {
   messagingSenderId: "212977010921"
 };
 firebase.initializeApp(config);
+
 let database = firebase.database();
 
 $(document).ready(function () {
