@@ -55,20 +55,54 @@ ref.once('value', (data) => {
 })
 
 
-const register= firebase.database().ref('/registro');
-register.once('value', (data) => {
-  const regis = Object.values(data.val())[0] 
-  const email = regis.mail;
-  const name = regis.name;
-  const phone = regis.phone;
-  const birthday = regis.birthday;
-  console.log();
-  
-  const body= `<p>Nombre:${name}</p> <p>Email:${email}</p> <p>Telefono:${phone}</p> <p>Fecha de Nacimiento:${birthday}</p>`
 
-  sendEmailMandrill(email, name, body)
-  
-})
+const createTemplate = (response, position) => {
+  respuestas.innerHTML = `
+    <form action="#">
+<p>
+
+        <label for="rpta1">
+          <input class="with-gap" name="group1" type="radio" id="rpta1"  />
+          <span>${response[position].options['respuesta1']}</span>
+        </label>
+</p>
+<p>
+        <label for="rpta2">
+          <input class="with-gap" name="group1" type="radio" id="rpta2"/>
+          <span>${response[position].options['respuesta2']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta3">
+          <input class="with-gap" name="group1" type="radio" id="rpta3" />
+          <span>${response[position].options['respuesta3']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta4">
+          <input class="with-gap" name="group1" type="radio" id="rpta4" />
+          <span>${response[position].options['respuesta4']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta5">
+          <input class="with-gap" name="group1" type="radio" id="rpta5" />
+          <span>${response[position].options['respuesta5']}</span>
+        </label>
+        </p>
+  </form>
+  `
+
+
+}
+
+// })
+// console.log(dat.key);
+// let client = dat.key;
+// console.log(dat.val());
+//   extraerDataVisitator = visitator.val();
+// sendEmailMandrill();
+
 
 // let total2= 14;
 
