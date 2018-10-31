@@ -35,114 +35,74 @@ $(document).ready(function () {
 });
 
 const ref = firebase.database().ref('/questions');
+
 ref.once('value', (data) => {
-  console.log(data.key.length);
-  // data.forEach(dat => {
-  // for (let i = 0; i < data.key.length; i++) {
-  const response = Object.values(data.val())
-  // let response1 = Object.values(data.val())[i].options['respuesta1'];
-  // console.log('respuesta 1 ' + response1);
-  // let response2 = Object.values(data.val())[i].options['respuesta2'];
-  // console.log('respuesta 2 ' + response2);
-  // let response3 = Object.values(data.val())[i].options['respuesta3'];
-  // console.log('respuesta 3 ' + response3);
-  // let response4 = Object.values(data.val())[i].options['respuesta4'];
-  // console.log('respuesta 4 ' + response4);
-  // let response5 = Object.values(data.val())[i].options['respuesta5'];
-  // console.log('response5' + response5);
-
-  // }
-
-   position = 0;
-  respuestas.innerHTML = `
-
-  <p></p>
-  <ul>
-    <li>
-      <label for="rpta">
-        <input class="with-gap" name="group1" type="radio"  />
-        <span>${response[position].options['respuesta1']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta2']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta3']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta4']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta5']}</span>
-      </label>
-    </li>
-  </ul>  
-</div>
-`
-
-  // })
-  // console.log(dat.key);
-  // let client = dat.key;
-  // console.log(dat.val());
-  //   extraerDataVisitator = visitator.val();
-  // sendEmailMandrill();
-})
-document.getElementById('next').addEventListener("click", () => {
-  position = position + 1;
-  respuestas.innerHTML = "";
-  
   position = 0;
-  respuestas.innerHTML = `
+  console.log(data.key.length);
+  const response = Object.values(data.val())
+  createTemplate(response, position);
 
-  <p></p>
-  <ul>
-    <li>
-      <label for="rpta">
-        <input class="with-gap" name="group1" type="radio"  />
-        <span>${response[position].options['respuesta1']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta2']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta3']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta4']}</span>
-      </label>
-    </li>
-    <li>
-      <label for="rpta">
-        <input name="group1" type="radio"  />
-        <span>${response[position].options['respuesta5']}</span>
-      </label>
-    </li>
-  </ul>  
-</div>
-`
-
+  document.getElementById('next').addEventListener("click", () => {
+    if (position < 7) {
+      position = position + 1;
+      createTemplate(response, position);
+    } else if (position = 6) {
+      $(document).ready(function () {
+        $('.modal').modal();
+      });
+    }
+  })
 })
+
+
+
+const createTemplate = (response, position) => {
+  respuestas.innerHTML = `
+    <form action="#">
+<p>
+
+        <label for="rpta1">
+          <input class="with-gap" name="group1" type="radio" id="rpta1"  />
+          <span>${response[position].options['respuesta1']}</span>
+        </label>
+</p>
+<p>
+        <label for="rpta2">
+          <input class="with-gap" name="group1" type="radio" id="rpta2"/>
+          <span>${response[position].options['respuesta2']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta3">
+          <input class="with-gap" name="group1" type="radio" id="rpta3" />
+          <span>${response[position].options['respuesta3']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta4">
+          <input class="with-gap" name="group1" type="radio" id="rpta4" />
+          <span>${response[position].options['respuesta4']}</span>
+        </label>
+        </p>
+        <p>
+        <label for="rpta5">
+          <input class="with-gap" name="group1" type="radio" id="rpta5" />
+          <span>${response[position].options['respuesta5']}</span>
+        </label>
+        </p>
+  </form>
+  `
+
+
+}
+
+// })
+// console.log(dat.key);
+// let client = dat.key;
+// console.log(dat.val());
+//   extraerDataVisitator = visitator.val();
+// sendEmailMandrill();
+
 
 // let total2= 14;
 
