@@ -49,7 +49,10 @@ ref.once('value', (data) => {
     // console.log('respuesta 4 ' + response4);
     // let response5 = Object.values(data.val())[i].options['respuesta5'];
     // console.log('response5' + response5);
-    respuestas.innerHTML += `<checkbox></checkbox>    
+    respuestas.innerHTML += `<checkbox>
+    
+    
+    </checkbox>    
 ${response[i].options['respuesta1']}
 ${response[i].options['respuesta2']}
 ${response[i].options['respuesta3']}
