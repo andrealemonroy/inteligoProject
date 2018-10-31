@@ -22,7 +22,7 @@ ref.once('value', (data) => {
     let client = dat.key;
     console.log(dat.val());
     //   extraerDataVisitator = visitator.val();
-    // sendEmailMandrill();
+    sendEmailMandrill();
   })
 });
 

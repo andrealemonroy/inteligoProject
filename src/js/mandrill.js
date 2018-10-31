@@ -5,7 +5,7 @@ function sendEmailMandrill(){
       data: {
         'key': 'ZGiSDAUGJIgaCMIqm9ysPA',
         'message': {
-          "html": `<div>
+          "html": `<div>    
           <p>Estimado Sr. Acontinuación se adjunta los principales contratos para completar su registro a Inteligo.
           Asimismo, un asesor se comunicará con usted a la brevedad posible.</p>
          Atte.
