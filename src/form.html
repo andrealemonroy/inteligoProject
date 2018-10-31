@@ -32,7 +32,7 @@
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">cake</i>
-          <input id="icon_birthday" type="text" class="datepicker">
+          <input id="icon_birthday" type="date">
           <label for="icon_birthday">Fecha de nacimiento</label>
         </div>
         <div class="input-field col s12 m6">
@@ -59,7 +59,7 @@
         </div>
       </div>
       <p class="center-align">
-        <button class="waves-effect indigo darken-2 btn" type="submit"><i class="material-icons right">send</i>enviar</button>
+        <button id="add_info" class="waves-effect indigo darken-2 btn" type="submit" onclick="insertTask()"><i class="material-icons right">send</i>enviar</button>
       </p>
     </form>
   </div>
@@ -68,6 +68,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+<script src="./js/firebase.js"></script>
 <script src="./js/form.js"></script>
 
 </body>
