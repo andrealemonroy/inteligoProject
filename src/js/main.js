@@ -1,3 +1,4 @@
+const preguntas = document.getElementById("question");
 const respuestas = document.getElementById("responses");
 const imagenTemplate = document.getElementById('imagenes');
 
@@ -279,6 +280,7 @@ perfilFunction(total1,total2)
 
 
 const createTemplate = (response, position, num) => {
+  preguntas.innerHTML =  `<p>${response[position].text}</p>` 
   respuestas.innerHTML = '';
   for (let i = 1; i <= num; i++) {
     respuestas.innerHTML += `
@@ -290,6 +292,7 @@ const createTemplate = (response, position, num) => {
 </p>  `
 
   }
+  position = position+1;
 };
 
 const imagenFunction = (image) => {
