@@ -11,106 +11,64 @@
 </head>
 
 <body>
+  <nav>
+    <div class="nav-wrapper indigo darken-2">
+      <a href="#" class="brand-logo left"><img src="../img/I Complementarias Fondo azul (1).jpg" style="height:50px;"></a>
+    </div>
+  </nav>
+
   <div class="container">
     <form class="col s12">
       <div class="row">
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
           <input id="icon_name" type="text" class="validate">
           <label for="icon_name">Nombre</label>
         </div>
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">perm_identity</i>
-          <input id="icon_lastname" class="validate">
+          <input id="icon_lastname" type="text" class="validate">
           <label for="icon_lastname">Apellido</label>
         </div>
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">cake</i>
-          <input id="icon_birthday" class="validate">
+          <input id="icon_birthday" type="text" class="datepicker">
           <label for="icon_birthday">Fecha de nacimiento</label>
         </div>
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">people</i>
-          <input id="icon_people" class="validate">
-          <label for="icon_people">Género</label>
+          <!-- <input id="icon_people" class="browser-default"> -->
+          
+          <select class="browser-default" id="icon_people">
+            <label for="icon_people">Género</label>
+            <option value="" disabled selected>Género </option>
+            <option value="1">Femenino</option>
+            <option value="2">Masculino</option>
+            <option value="3">Prefiero no responder</option>
+          </select>
         </div>
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">phone</i>
-          <input id="icon_phone" class="validate">
+          <input id="icon_phone" type="number" class="validate">
           <label for="icon_phone">Teléfono</label>
         </div>
-        <div class="input-field col s12 m6 l4">
+        <div class="input-field col s12 m6">
           <i class="material-icons prefix">email</i>
           <input id="icon_email" type="email" class="validate">
           <label for="icon_email" data-error="wrong" data-success="right">Correo electrónico</label>
         </div>
       </div>
       <p class="center-align">
-        <button class="waves-effect waves-light btn" type="submit"><i class="material-icons right">send</i>enviar</button>
+        <button class="waves-effect indigo darken-2 btn" type="submit"><i class="material-icons right">send</i>enviar</button>
       </p>
     </form>
   </div>
 
-
-  <div class="container">
-    <ul>
-      <li>
-        <p>¿Cuál es el objetivo primario de su portafolio de inversión?</p>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Seguridad.- Prefiero la seguridad de mis inversiones, así la rentabilidad en el
-            tiempo se encuentre por debajo de los niveles de inflación (2% anual).</span>
-        </label>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Protección a la inflación.- Estoy dispuesto a aceptar sólo un nivel bajo de
-            variación en mi inversión a cambio de una rentabilidad que me proteja de la
-            inflación.</span>
-        </label>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Crecimiento y seguridad.- Quiero un balance entre crecimiento y seguridad, y
-            estoy dispuesto a aceptar un nivel medio de variación en el valor de mi inversión
-            con la finalidad de alcanzar una rentabilidad mayor a la inflación.</span>
-        </label>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Crecimiento.- Estoy interesado en generar crecimiento en mi inversión en el
-            tiempo, y estoy menos preocupado por las fluctuaciones que éste pueda registrar
-            en la búsqueda del retorno.</span>
-        </label>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Máximo crecimiento.- Mi único objetivo es el máximo crecimiento de mi inversión
-            en el tiempo y puedo tolerar altos niveles de fluctuación en el valor de mi
-            inversión en la búsqueda del retorno.</span>
-        </label>
-      </li>
-    </ul>
-    <ul>
-      <li>
-        <p>¿Cuál es el objetivo primario de su portafolio de inversión?</p>
-      </li>
-      <li>
-        <label for="rpta">
-          <input type="button">
-          <span>Seguridad</span>
-        </label>
-      </li>
-    </ul>
-  </div>
-
-
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
+<script src="./js/form.js"></script>
 
 </body>
 
