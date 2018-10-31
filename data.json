@@ -2,7 +2,7 @@
   "questions" : {
     "-LQ62urbng1PEukwpMvE" : {
       "options" : {
-        "respuesta1" : "{texto:\"Seguridad: Prefiero la seguridad de mis inversiones, así la rentabilidad en el tiempo se encuentre por debajo de los niveles de inflación (2% anual).\",}",
+        "respuesta1" : "Seguridad: Prefiero la seguridad de mis inversiones, así la rentabilidad en el tiempo se encuentre por debajo de los niveles de inflación (2% anual).",
         "respuesta2" : "Protección a la inflación: Estoy dispuesto a aceptar sólo un nivel bajo de variación en mi inversión a cambio de una rentabilidad que me proteja de la inflación.",
         "respuesta3" : "Crecimiento y seguridad: Quiero un balance entre crecimiento y seguridad, y estoy dispuesto a aceptar un nivel medio de variación en el valor de mi inversión con la finalidad de alcanzar una rentabilidad mayor a la inflación.",
         "respuesta4" : "Crecimiento: Estoy interesado en generar crecimiento en mi inversión en el tiempo, y estoy menos preocupado por las fluctuaciones que éste pueda registrar en la búsqueda del retorno.",

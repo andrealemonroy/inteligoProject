@@ -33,73 +33,102 @@ let database = firebase.database();
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
-
+const arr = [];
 const ref = firebase.database().ref('/questions');
 
 ref.once('value', (data) => {
   position = 0;
   console.log(data.key.length);
   const response = Object.values(data.val())
-  createTemplate(response, position);
+  createTemplate(response, position, 5);
 
   document.getElementById('next').addEventListener("click", () => {
-    if (position < 7) {
-      position = position + 1;
-      createTemplate(response, position);
-    } else if (position = 6) {
-      $(document).ready(function () {
-        $('.modal').modal();
-      });
+    const val = document.querySelector('input[name="group1"]:checked').value;
+    puntage(val);
+    if (position = 1) {
+      createTemplate(response, position, 3);
     }
+    document.getElementById('next').addEventListener("click", () => {
+      if (position = 2) {
+        createTemplate(response, position, 4);
+      }
+      document.getElementById('next').addEventListener("click", () => {
+        if (position = 3) {
+          createTemplate(response, position, 5);
+        }
+        document.getElementById('next').addEventListener("click", () => {
+          if (position = 4) {
+            createTemplate(response, position, 5);
+          }
+          document.getElementById('next').addEventListener("click", () => {
+            if (position = 5) {
+              createTemplate(response, position, 4);
+            }
+            document.getElementById('next').addEventListener('click', () => {
+              if (position = 6) {
+                createTemplate(response, position, 5);
+              }
+              document.getElementById('next').addEventListener('click', () => {
+                if (position = 7) {
+                  createTemplate(response, position, 5);
+                }
+              })
+              document.getElementById('next').addEventListener('click', () => {
+                $(document).ready(function () {
+                  $('.modal').modal();
+                })
+
+              })
+            })
+          })
+
+        })
+
+      })
+
+    })
+
   })
-})
+
+});
+
+// const refAnswers = firebase.database().ref('/puntaje');
+// refAnswers.once('value', (data) => {
+//   console.log(data.val());
+
+const puntage = (val) => {
+  arr.push(val);
+
+  // if (data === val) {
+  //   console.log('yay')
+  // }
+  console.log(arr);
+}
 
 
+// data['group0']
 
-const createTemplate = (response, position) => {
-  respuestas.innerHTML = `
-    <form action="#">
+// })
+
+
+const createTemplate = (response, position, num) => {
+  respuestas.innerHTML = '';
+  for (let i = 1; i <= num; i++) {
+    respuestas.innerHTML += `
+
 <p>
+        <label for="rpta${i}">
+          <input value="${response[position].options['respuesta' + i]}" class="with-gap" name="group1" type="radio" id="rpta${i}"  />
+          <span>${response[position].options['respuesta' + i]}</span>
+        </label>
+</p>  `
 
-        <label for="rpta1">
-          <input class="with-gap" name="group1" type="radio" id="rpta1"  />
-          <span>${response[position].options['respuesta1']}</span>
-        </label>
-</p>
-<p>
-        <label for="rpta2">
-          <input class="with-gap" name="group1" type="radio" id="rpta2"/>
-          <span>${response[position].options['respuesta2']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta3">
-          <input class="with-gap" name="group1" type="radio" id="rpta3" />
-          <span>${response[position].options['respuesta3']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta4">
-          <input class="with-gap" name="group1" type="radio" id="rpta4" checked/>
-          <span>${response[position].options['respuesta4']}</span>
-        </label>
-        </p>
-        <p>
-        <label for="rpta5">
-          <input class="with-gap" name="group1" type="radio" id="rpta5" />
-          <span>${response[position].options['respuesta5']}</span>
-        </label>
-        </p>
-  </form>
-  `
+  }
 
 
 }
-$('.with-gap').click(function() {
-  if($('#radio_button').is(':checked')) { alert("it's checked"); }
-});
 
- 
+
 // })
 // console.log(dat.key);
 // let client = dat.key;
