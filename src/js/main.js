@@ -15,6 +15,16 @@ $(document).ready(function(){
   $('.sidenav').sidenav();
 });
 
+let ref = firebase.database().ref('/questions');
+ref.once('value', (data) => {
+  data.forEach(dat => {
+    // console.log(dat.key);
+    let client = dat.key;
+    console.log(dat.val());
+    //   extraerDataVisitator = visitator.val();
+    // sendEmailMandrill();
+  })
+});
 
 // new Chart(document.getElementById("inversorPie"), {
 //   type: 'pie',
@@ -88,5 +98,5 @@ const perfilFunction=(total1, total2)=>{
 
 perfilFunction(10, 24)
 
-
+});
 
