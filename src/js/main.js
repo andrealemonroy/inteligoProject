@@ -38,7 +38,7 @@ ref.once('value', (data) => {
   console.log(data.key.length);
   // data.forEach(dat => {
   for (let i = 0; i < data.key.length; i++) {
-    let response = Object.values
+    let response = Object.values(data.val())
     // let response1 = Object.values(data.val())[i].options['respuesta1'];
     // console.log('respuesta 1 ' + response1);
     // let response2 = Object.values(data.val())[i].options['respuesta2'];
@@ -49,12 +49,13 @@ ref.once('value', (data) => {
     // console.log('respuesta 4 ' + response4);
     // let response5 = Object.values(data.val())[i].options['respuesta5'];
     // console.log('response5' + response5);
-    respuestas.innerHTML = `    
-${response1}
-${response2}
-${response3}
-${response4}
-${response5}
+    respuestas.innerHTML += `<checkbox></checkbox>    
+${response[i].options['respuesta1']}
+${response[i].options['respuesta2']}
+${response[i].options['respuesta3']}
+${response[i].options['respuesta4']}
+${response[i].options['respuesta5']}
+
          `
   }
 
