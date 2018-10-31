@@ -9,11 +9,10 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./src/css/principal.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-
 </head>
 
 <body>
+
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo left"><img src="./img/I Complementarias Fondo azul (1).jpg" style="height:50px;"></a>
@@ -30,6 +29,21 @@
             <li><a href="./src/form.html">CONOCE TU PERFIL</a></li>
         </ul>
     </nav>
+
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4><strong>A continuación se le mostrará su perfil de inversión</strong></h4>
+            <p>Ingrese su correo electrónico y le enviaremos la información de su perfil y portafolio óptimo</p>
+            <input type="textbox"/>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Enviar</a>
+        </div>
+    </div>
+
+
+
+
     <ul class="sidenav hide-on-med-and-up" id="mobile-demo">
         <li><a href="#">Acerca de Inteligo SAB</a></li><br>
         <li><a href="#">¿Por qué nosotros?</a></li><br>
@@ -38,6 +52,9 @@
         <li><a href="./src/form.html">CONOCE TU PERFIL</a></li>
     </ul>
     <div id="responses"></div>
+    <a class="waves-effect waves-light btn modal-trigger" id="next" href="#modal1">next</a>
+
+
 
     <div class="container">
         <img src="./img/banner-01.jpg" style="max-width:100%; margin-top:2%;">
@@ -59,14 +76,15 @@
 
 
     <!-- <canvas id="inversorPie" width="800" height="450"></canvas> -->
-      <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.2/js/materialize.min.js"></script>
     <script src="./src/js/data.js"></script>
     <script src="./src/js/mandrill.js"></script>
     <script src="./src/js/main.js"></script>
+
 
 
 </body>

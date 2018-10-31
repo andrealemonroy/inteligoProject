@@ -27,44 +27,31 @@ const config = {
   messagingSenderId: "212977010921"
 };
 firebase.initializeApp(config);
+
 let database = firebase.database();
 
 $(document).ready(function () {
   $('.sidenav').sidenav();
 });
 
-let ref = firebase.database().ref('/questions');
+const ref = firebase.database().ref('/questions');
+
 ref.once('value', (data) => {
+  position = 0;
   console.log(data.key.length);
-  // data.forEach(dat => {
-  for (let i = 0; i < data.key.length; i++) {
-    let response = Object.values
-    // let response1 = Object.values(data.val())[i].options['respuesta1'];
-    // console.log('respuesta 1 ' + response1);
-    // let response2 = Object.values(data.val())[i].options['respuesta2'];
-    // console.log('respuesta 2 ' + response2);
-    // let response3 = Object.values(data.val())[i].options['respuesta3'];
-    // console.log('respuesta 3 ' + response3);
-    // let response4 = Object.values(data.val())[i].options['respuesta4'];
-    // console.log('respuesta 4 ' + response4);
-    // let response5 = Object.values(data.val())[i].options['respuesta5'];
-    // console.log('response5' + response5);
-    respuestas.innerHTML = `    
-${response1}
-${response2}
-${response3}
-${response4}
-${response5}
-         `
-  }
+  const response = Object.values(data.val())
+  createTemplate(response, position);
 
-
-  // })
-  // console.log(dat.key);
-  // let client = dat.key;
-  // console.log(dat.val());
-  //   extraerDataVisitator = visitator.val();
-  // sendEmailMandrill();
+  document.getElementById('next').addEventListener("click", () => {
+    if (position < 7) {
+      position = position + 1;
+      createTemplate(response, position);
+    } else if (position = 6) {
+      $(document).ready(function () {
+        $('.modal').modal();
+      });
+    }
+  })
 })
 
 
