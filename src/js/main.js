@@ -2,80 +2,67 @@ const preguntas = document.getElementById("question");
 const respuestas = document.getElementById("responses");
 const imagenTemplate = document.getElementById('imagenes');
 
-// Initialize Firebase
-const config = {
-  apiKey: "AIzaSyAWhYg7ooZsREWBlcDS4yCrKUOh2tQhVVk",
-  authDomain: "inteligo-hackaton.firebaseapp.com",
-  databaseURL: "https://inteligo-hackaton.firebaseio.com",
-  projectId: "inteligo-hackaton",
-  storageBucket: "inteligo-hackaton.appspot.com",
-  messagingSenderId: "212977010921"
-};
-firebase.initializeApp(config);
-
 let database = firebase.database();
 
-$(document).ready(function() {
-  $(".sidenav").sidenav();
-});
+
 console.log($('#email').val());
 
 
-ref.once("value", data => {
-  position = 0;
-  console.log(data.key.length);
-  const response = Object.values(data.val());
-  createTemplate(response, position);
+// ref.once("value", data => {
+//   position = 0;
+//   console.log(data.key.length);
+//   const response = Object.values(data.val());
+//   createTemplate(response, position);
 
-  document.getElementById("next").addEventListener("click", () => {
-    if (position < 7) {
-      position = position + 1;
-      createTemplate(response, position);
-    } else if ((position = 6)) {
-      $(document).ready(function() {
-        $(".modal").modal();
-      });
-    }
-  });
-});
+//   document.getElementById("next").addEventListener("click", () => {
+//     if (position < 7) {
+//       position = position + 1;
+//       createTemplate(response, position);
+//     } else if ((position = 6)) {
+//       $(document).ready(function() {
+//         $(".modal").modal();
+//       });
+//     }
+//   });
+// });
 
-const createTemplate = (response, position) => {
-  respuestas.innerHTML = `
-    <form action="#">
-    <p>
-      <label for="rpta1">
-        <input class="with-gap" name="group1" type="radio" id="rpta1" />
-        <span class="dynamic"> <div class="dynamic">${response[position].options["respuesta1"]}</div></span>
-      </label>
-    </p>
-    <p>
-      <label for="rpta2">
-        <input class="with-gap" name="group1" type="radio" id="rpta2" />
-        
-        <span > <div class="dynamic"> ${response[position].options["respuesta2"]}</div></span>
-      </label>
-    </p>
-    <p>
-      <label for="rpta3">
-        <input class="with-gap" name="group1" type="radio" id="rpta3" />
-        <span><div class="dynamic">${response[position].options["respuesta3"]}</div></span>
-      </label>
-    </p>
-    <p>
-      <label for="rpta4">
-        <input class="with-gap" name="group1" type="radio" id="rpta4" />
-        <span><div class="dynamic">${response[position].options["respuesta4"]}</div></span>
-      </label>
-    </p>
-    <p>
-      <label for="rpta5">
-        <input class="with-gap" name="group1" type="radio" id="rpta5" />
-        <span><div class="dynamic">${response[position].options["respuesta5"]}</div></span>
-      </label>
-    </p>
-  </form>
-  `;
-};
+// const createTemplate = (response, position) => {
+//   respuestas.innerHTML = `
+//     <form action="#">
+//     <p>
+//       <label for="rpta1">
+//         <input class="with-gap" name="group1" type="radio" id="rpta1" />
+//         <span class="dynamic"> <div class="dynamic">${response[position].options["respuesta1"]}</div></span>
+//       </label>
+//     </p>
+//     <p>
+//       <label for="rpta2">
+//         <input class="with-gap" name="group1" type="radio" id="rpta2" />
+
+//         <span > <div class="dynamic"> ${response[position].options["respuesta2"]}</div></span>
+//       </label>
+//     </p>
+//     <p>
+//       <label for="rpta3">
+//         <input class="with-gap" name="group1" type="radio" id="rpta3" />
+//         <span><div class="dynamic">${response[position].options["respuesta3"]}</div></span>
+//       </label>
+//     </p>
+//     <p>
+//       <label for="rpta4">
+//         <input class="with-gap" name="group1" type="radio" id="rpta4" />
+//         <span><div class="dynamic">${response[position].options["respuesta4"]}</div></span>
+//       </label>
+//     </p>
+//     <p>
+//       <label for="rpta5">
+//         <input class="with-gap" name="group1" type="radio" id="rpta5" />
+//         <span><div class="dynamic">${response[position].options["respuesta5"]}</div></span>
+//       </label>
+//     </p>
+//   </form>
+//   `;
+// };
 
 const arr = [];
 const ref = firebase.database().ref('/questions');
@@ -132,10 +119,7 @@ ref.once('value', (data) => {
                 imagenFunction('./imagenes/pregunat8.PNG')
                 createTemplate(response, position, 5);
                 document.getElementById('next').addEventListener('click', () => {
-                  window.location.href = "../src/result.html";
-                  $(document).ready(function () {
-                    $('.modal').modal();
-                  })
+                  $('.modal').modal();
                 })
               })
             })
@@ -173,172 +157,167 @@ const puntage = (val) => {
   let score7 = 0;
   let score8 = 0;
   console.log(newArray);
-switch (newArray[0]) {
+  switch (newArray[0]) {
     case 1:
-        score1 = 0;
-        break;
+      score1 = 0;
+      break;
     case 2:
-    score1 = 3;
-        break;
+      score1 = 3;
+      break;
     case 3:
-    score1 = 0;
-        break;
+      score1 = 0;
+      break;
     case 4:
-    score1 = 0;
-        break;    
+      score1 = 0;
+      break;
     case 5:
-    score1 = 0;
-        break;
+      score1 = 0;
+      break;
     default:
-    score1 = 0;
-}
+      score1 = 0;
+  }
 
-switch (newArray[1]) {
-  case 1:
+  switch (newArray[1]) {
+    case 1:
       score2 = 3;
       break;
-  case 2:
-  score2 = 5;
+    case 2:
+      score2 = 5;
       break;
-  case 3:
-  score2 = 7;
+    case 3:
+      score2 = 7;
       break;
-  default:
-  score2 = 0;
-}
+    default:
+      score2 = 0;
+  }
 
-switch (newArray[2]) {
-  case 1:
+  switch (newArray[2]) {
+    case 1:
       score3 = 0;
       break;
-  case 2:
-  score3 = 2;
+    case 2:
+      score3 = 2;
       break;
-  case 3:
-  score3 = 4;
+    case 3:
+      score3 = 4;
       break;
-  case 4:
-  score3 = 8;
-      break;  
-  default:
-  score3 = 0;
-}
+    case 4:
+      score3 = 8;
+      break;
+    default:
+      score3 = 0;
+  }
 
-switch (newArray[3]) {
-  case 1:
+  switch (newArray[3]) {
+    case 1:
       score4 = 0;
       break;
-  case 2:
-  score4 = 2;
+    case 2:
+      score4 = 2;
       break;
-  case 3:
-  score4 = 4;
+    case 3:
+      score4 = 4;
       break;
-  case 4:
-  score4 = 6;
-      break;    
-  case 5:
-  score4 = 8;
+    case 4:
+      score4 = 6;
       break;
-  default:
-  score4 = 0;
-}
+    case 5:
+      score4 = 8;
+      break;
+    default:
+      score4 = 0;
+  }
 
-switch (newArray[4]) {
-  case 1:
+  switch (newArray[4]) {
+    case 1:
       score5 = 0;
       break;
-  case 2:
-  score5 = 2;
+    case 2:
+      score5 = 2;
       break;
-  case 3:
-  score5 = 4;
+    case 3:
+      score5 = 4;
       break;
-  case 4:
-  score5 = 6;
-      break;    
-  case 5:
-  score5 = 8;
+    case 4:
+      score5 = 6;
       break;
-  default:
-  score5 = 0;
-}
+    case 5:
+      score5 = 8;
+      break;
+    default:
+      score5 = 0;
+  }
 
-switch (newArray[5]) {
-  case 1:
+  switch (newArray[5]) {
+    case 1:
       score6 = 0;
       break;
-  case 2:
-  score6 = 2;
+    case 2:
+      score6 = 2;
       break;
-  case 3:
-  score6 = 4;
+    case 3:
+      score6 = 4;
       break;
-  case 4:
-  score6 = 8;
-      break;    
-  default:
-  score6 = 0;
-}
-console.log(newArray[5]);
+    case 4:
+      score6 = 8;
+      break;
+    default:
+      score6 = 0;
+  }
+  console.log(newArray[5]);
 
 
-switch (newArray[6]) {
-  case 1:
+  switch (newArray[6]) {
+    case 1:
       score7 = 0;
       break;
-  case 2:
-  score7 = 2;
+    case 2:
+      score7 = 2;
       break;
-  case 3:
-  score7 = 4;
+    case 3:
+      score7 = 4;
       break;
-  case 4:
-  score7 = 6;
-      break;    
-  case 5:
-  score7 = 8;
+    case 4:
+      score7 = 6;
       break;
-  default:
-  score7 = 0;
-}
-switch (newArray[7]) {
-  case 1:
+    case 5:
+      score7 = 8;
+      break;
+    default:
+      score7 = 0;
+  }
+  switch (newArray[7]) {
+    case 1:
       score8 = 0;
       break;
-  case 2:
+    case 2:
       score8 = 2;
       break;
-  case 3:
+    case 3:
       score8 = 4;
       break;
-  case 4:
+    case 4:
       score8 = 6;
-      break;    
-  case 5:
-    score8 = 8;
       break;
-  default:
-    score8 = 0;
+    case 5:
+      score8 = 8;
+      break;
+    default:
+      score8 = 0;
+  }
+
+  total1 = score1 + score2 + score3 + score4;
+  total2 = score5 + score6 + score7 + score8;
+  console.log(total1);
+  console.log(total2);
+
+  perfilFunction(total1, total2)
+
 }
-
-total1 = score1 + score2 + score3 + score4;
-total2 = score5 + score6 + score7 + score8;
-console.log(total1);
-console.log(total2);
-
-perfilFunction(total1,total2)
-
-}
-
-
-// data['group0']
-
-// })
 
 
 const createTemplate = (response, position, num) => {
-  preguntas.innerHTML =  `<p>${response[position].text}</p> `
+  preguntas.innerHTML = `<p>${response[position].text}</p> `
   respuestas.innerHTML = '';
   for (let i = 1; i <= num; i++) {
     console.log(response[position].text)
@@ -346,8 +325,6 @@ const createTemplate = (response, position, num) => {
 
 
 <p>     
-        
-
         <label for="rpta${i}">
           <input class="with-gap" value="${response[position].options['respuesta' + i]}" name="group1" type="radio" id="rpta${i}"  />
           <span>${response[position].options['respuesta' + i]}</span>
@@ -355,7 +332,7 @@ const createTemplate = (response, position, num) => {
 </p>  `
 
   }
-  position = position+1;
+  position = position + 1;
 };
 
 const imagenFunction = (image) => {
@@ -419,6 +396,4 @@ const perfilFunction = (total1, total2) => {
     return console.log("defensivo");
   }
 };
-
-perfilFunction(10, 24);
 
