@@ -1,12 +1,13 @@
-/* const newPostKey = firebase.database().ref().child('questions').push().key;
-firebase.database().ref('questions/'+ newPostKey).set({
-  text: '8. Las crisis financieras no son el estado habitual del mercado. Sin embargo, considerando el retorno anual promedio y la máxima caída que se registraría en una crisis, ¿cuál de las siguientes opciones te parece la más adecuada?',
-  options: {
-    respuesta1: 'Portafolio A',
-    respuesta2: 'Portafolio B',
-    respuesta3: 'Portafolio C',
-    respuesta4: 'Portafolio D',
-    respuesta5: 'Portafolio E'
-  },
-  image: ''
-}); */
+// const newPostKey = firebase.database().ref().child("scores").push().key;
+// firebase.database().ref("scores/"+ newPostKey).set({
+//   "group0": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 6}, {"rpta5": 8}],
+//   "group1": [{"rpta1": 3}, {"rpta2": 5}, {"rpta3": 7}],
+//   "group2": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 8}],
+//   "group3": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 6}, {"rpta5": 8}],
+//   "group4": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 6}, {"rpta5": 8}],
+//   "group5": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 8}],
+//   "group6": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 6}, {"rpta5": 8}],
+//   "group7": [{"rpta1": 0}, {"rpta2": 2}, {"rpta3": 4}, {"rpta4": 6}, {"rpta5": 8}]  
+// }); 
+
+// console.log();
