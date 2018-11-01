@@ -1,0 +1,12 @@
+.borderForm {
+  margin: 60px;
+}
+
+/* CSS para el formulario */
+.dynamic {
+    display: inline-block;
+  font-size: 18px; 
+    line-height: 22px;
+    font-weight: lighter;
+}
+
