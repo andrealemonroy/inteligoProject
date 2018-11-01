@@ -1,7 +1,6 @@
-$(document).ready(function() {
-  $(".datepicker").datepicker();
-
-});
+// $(document).ready(function() {
+//   $(".datepicker").datepicker();
+// });
 
 
 const addInfo = document.getElementById("add_info");
@@ -27,4 +26,5 @@ addInfo.addEventListener("click", () => {
     phone: phone,
     mail: mail
   });
+    document.getElementById("miForm").reset();
 });

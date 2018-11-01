@@ -1,4 +1,5 @@
 new Chart(document.getElementById("inversorPie"), {
+
     type: 'pie',
     data: {
       labels: ["Caja y equivalentes", "Renta Fija", "Renta Variable", "Renta Alternativa"],
@@ -15,3 +16,4 @@ new Chart(document.getElementById("inversorPie"), {
       }
     }
   });
+
