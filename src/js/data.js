@@ -11,3 +11,14 @@
 // }); 
 
 // console.log();
+$('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  }) 
+  setInterval(function() {
+    $('.carousel').carousel('next');
+  }, 2000);    //slider init
+
+  $(document).ready(function() {
+    $(".sidenav").sidenav();
+  });
